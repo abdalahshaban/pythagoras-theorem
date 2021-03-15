@@ -1,0 +1,1 @@
+# u can write ur own function as long as ur header is function(user_input, quiz_variables) and return boolean

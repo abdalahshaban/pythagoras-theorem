@@ -1,6 +1,7 @@
 p,
 span {
     color: #262C3A;
+    font-family: Poppins;
 }
 
 #plot_common_one_image_two {
@@ -15,4 +16,15 @@ span {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#plot_common_two_image_one {
+    height: 150px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.proof-p p {
+    display: block;
 }

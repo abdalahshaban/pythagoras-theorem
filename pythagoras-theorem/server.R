@@ -9,6 +9,31 @@ shinyServer(function(input, output, session) {
                      Authorization = TRUE,
                      env = environment(),
                      session = session)
+
+
+
+  tr <- function(word) {
+    translation[[language$current]][[word]]
+  }
+  tr_style <- function(word) {
+    translation[[language$current]][["LanguageOptions"]][["style"]][[word]]
+  }
+
+  tr_latex <- function(word) {
+    latex2exp::TeX(Translations::plotTex(paste("\\s{", word, "}"), language$current))
+  }
+  con_num <- function(number) {
+    Translations::translateNumber(number, language$current)
+  }
+  number_mj <- function(number) {
+    mj(paste("(", number, ")^{2}"), language$current)
+  }
+
+
+  number_sqrt <- function(number) {
+    mj(paste("\\sqrt{", number, "}"), language$current)
+  }
+
   output$learn_content <- renderUI({
     eval(parse(text = includeText(paste0("./www/Content/learn/step", toString(learn_tab$current_step), ".R"))))
   })

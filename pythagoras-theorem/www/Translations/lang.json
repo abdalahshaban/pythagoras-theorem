@@ -30,21 +30,32 @@
         "Step one content": "Step one content",
         "Step two content": "Step two content",
         "Step three content": "Step three content",
-		"The right answer":"The right answer",
-		"Please...":"Please...",
-		"Generate new question first":"Generate new question first",
-		"Input a valid number":"Input a valid number",
-		"Wrong answer":"Wrong answer",
-		"Try again":"Try again",
+        "The right answer": "The right answer",
+        "Please...": "Please...",
+        "Generate new question first": "Generate new question first",
+        "Input a valid number": "Input a valid number",
+        "Wrong answer": "Wrong answer",
+        "Try again": "Try again",
         "Enter non empty equation": "Enter non empty equation",
         "Syntax error": "Syntax error",
         "Error": "Error",
         "LanguageOptions": {
             "class": "en",
             "style": {
-                "text-align": "text-align: left;"
+                "text-align": "text-align: left;",
+                "padding": "padding-left: 68px;"
             }
-        }
+        },
+        "figures": "In each of the following figures,",
+        "Find": "\\(\\mathbf{Find}\\) the side length which is denoted by sign(?)",
+        "cm": "cm",
+        "right_angle": "is right-angle at",
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "BC_2": "\\(\\text{(BC)}^2\\)",
+        "AB_2": "\\(\\text{(AB)}^2\\)",
+        "AC_2": "\\(\\text{(AB)}^2\\)"
     },
     "arabic": {
         "Multi Language application": "تطبيق متعدد اللغات",
@@ -77,20 +88,31 @@
         "Step one content": "محتوى الخطوة الأولى",
         "Step two content": "محتوى الخطوة الثانية",
         "Step three content": "محتوى الخطوة الثالثة",
-		"The right answer":"الاجابة الصحيحة",
-		"Please...":"...من فضلك",
-		"Generate new question first":"انشأ سؤال جديد اولا",
-		"Input a valid number":"ادخل رقم صحيح",
-		"Wrong answer":"اجابة خاطئة",
-		"Try again":"حاول مجدداً",
+        "The right answer": "الاجابة الصحيحة",
+        "Please...": "...من فضلك",
+        "Generate new question first": "انشأ سؤال جديد اولا",
+        "Input a valid number": "ادخل رقم صحيح",
+        "Wrong answer": "اجابة خاطئة",
+        "Try again": "حاول مجدداً",
         "Enter non empty equation": "أدخل معادلة غير فارغة",
         "Syntax error": "خطأ فى بناء الجملة",
         "Error": "خطأ",
         "LanguageOptions": {
             "class": "ar",
             "style": {
-                "text-align": "text-align: right;"
+                "text-align": "text-align: right;",
+                "padding": "padding-right: 74px;"
             }
-        }
+        },
+        "figures": "في الاشكال الاتيه",
+        "Find": "\\(\\mathbf{أوجد}\\) طول الضلع المشار اليه بالعلامه (؟):",
+        "cm": "سم",
+        "right_angle": "قائم الزاوية في",
+        "A": "\\(\\alwaysar{a}\\)",
+        "B": "\\(\\alwaysar{b}\\)",
+        "C": "\\(\\alwaysar{c}\\)",
+        "BC_2": "\\(\\alwaysar{(bc)^2}\\)",
+        "AB_2": "\\(\\alwaysar{(ab)^2}\\)",
+        "AC_2": "\\(\\alwaysar{(ac)^2}\\)"
     }
 }

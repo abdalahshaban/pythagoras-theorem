@@ -1,0 +1,18 @@
+p,
+span {
+    color: #262C3A;
+}
+
+#plot_common_one_image_two {
+    height: 150px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#plot_common_one_image_three {
+    height: 150px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

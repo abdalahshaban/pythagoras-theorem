@@ -64,6 +64,7 @@
         "M": "m",
         "AC_overLine": "\\(\\overline{AC}\\)",
         "CD_overLine": "\\(\\overline{CD}\\)",
+        "BD_overLine": "\\(\\overline{BD}\\)",
         "find_len": "\\(\\mathbf{Find}\\) : The length of",
         "find_len_2": "The length of each",
         "quadrilaterl": "is a quadrilaterl in which :",
@@ -74,7 +75,13 @@
         "Proof": "Proof:",
         "Pythagoras": "Pythagoras theorem",
         "first_req": "first req.",
-        "second_req": "second req."
+        "second_req": "second req.",
+        "Area": "The Area of",
+        "the_req": "the req.",
+        "such": "such that",
+        "cm_2": "\\(\\text{cm}^2\\)",
+        "half_frac_case": "\\(\\frac{1}{2}\\)",
+        "BD_frac_case": "\\(\\frac{24}{5}\\)"
     },
     "arabic": {
         "Multi Language application": "تطبيق متعدد اللغات",
@@ -141,6 +148,7 @@
         "M": "ق",
         "AC_overLine": "\\(\\overline{\\alwaysar{ac}}\\)",
         "CD_overLine": "\\(\\overline{\\alwaysar{cd}}\\)",
+        "BD_overLine": "\\(\\overline{\\alwaysar{bd}}\\)",
         "quadrilaterl": "شكل رباعي فيه ",
         "find_len": "\\(\\mathbf{أوجد}\\) :طول كل من",
         "find_len_2": "طول كل من",
@@ -151,6 +159,12 @@
         "Proof": "الاثبات",
         "Pythagoras": "فيثاغورس",
         "first_req": "المطلوب اولا",
-        "second_req": "المطلوب ثانيا"
+        "second_req": "المطلوب ثانيا",
+        "Area": "مساحة",
+        "the_req": "وهو المطلوب",
+        "such": "بحيث",
+        "cm_2": "\\(\\text{سم٢}\\)",
+        "half_frac_case": "\\(\\alwaysar{\\frac{1}{2}}\\)",
+        "BD_frac_case": "\\(\\alwaysar{\\frac{24}{5}}\\)"
     }
 }

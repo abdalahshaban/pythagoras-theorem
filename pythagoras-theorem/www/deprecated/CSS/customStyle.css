@@ -2,6 +2,9 @@ p,
 span {
     color: #262C3A;
     font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 30px;
 }
 
 #plot_common_one_image_two {
@@ -20,6 +23,13 @@ span {
 
 #plot_common_two_image_one {
     height: 150px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#plot_common_three_image_one {
+    height: 200px !important;
     display: flex;
     align-items: center;
     justify-content: center;

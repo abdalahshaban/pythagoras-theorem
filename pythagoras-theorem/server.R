@@ -4,7 +4,7 @@ shinyServer(function(input, output, session) {
   translation <- fromJSON(file = "./www/Translations/lang.json")
   language <- reactiveValues(current = "english")
   learn_tab <- reactiveValues(current_step = 1, number_of_steps = 3)
-  common_examples_tab <- reactiveValues(current_step = 2, number_of_steps = 3)
+  common_examples_tab <- reactiveValues(current_step = 3, number_of_steps = 3)
   Master::ServerInit(mjxMenuHTMLCSS = TRUE,
                      Authorization = TRUE,
                      env = environment(),

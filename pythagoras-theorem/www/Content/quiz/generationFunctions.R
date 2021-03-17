@@ -96,8 +96,8 @@ questionType2 <- function() {
 
 questionType3 <- function() {
   # weight of this type of question
-  weight <- 5
-  difficulty <- "easy"
+  weight <- 10
+  difficulty <- "meduim"
   # quiz_variables all the variables that u will need in the question and will be randomly generated
   quiz_variables <- list(
     AB = 0,
@@ -124,6 +124,68 @@ questionType3 <- function() {
   # quiz_variables$solution <- quiz_variables$AC
   # answers list carry list for each input id and the expected value in this input and optional validation function name
   answers = list(list(id = "quiz_eight_input_one", value = quiz_variables$AC, func = ""))
+  # return all that values as list of opjects similar to json opject
+  return(list(quiz_variables = quiz_variables, answers = answers, weight = weight, difficulty = difficulty))
+}
+
+questionType4 <- function() {
+  # weight of this type of question
+  weight <- 10
+  difficulty <- "meduim"
+  # quiz_variables all the variables that u will need in the question and will be randomly generated
+  quiz_variables <- list(
+    AB = 0,
+    BC = 0,
+    AC = 0,
+    BD = 0,
+    AE = 0,
+    AD = 0,
+    ED = 0
+  )
+
+  right_angle <- matrix(nrow = 3, ncol = 0)
+  right_angle_1 <- matrix(nrow = 3, ncol = 0)
+
+  for (AB in 1:20) {
+    for (BC in 1:20) {
+      for (AC in 1:20) {
+        if (AB ^ 2 + BC ^ 2 == AC ^ 2) {
+          right_angle <- cbind(c(AB, BC, AC), right_angle)
+        }
+      }
+    }
+  }
+
+  for (AE in 1:20) {
+    for (AD in 1:20) {
+      for (ED in 1:20) {
+        if (AB ^ 2 + BC ^ 2 == AC ^ 2) {
+          right_angle <- cbind(c(AB, BC, AC), right_angle)
+        }
+      }
+    }
+  }
+
+  round_num_col <- sample(1:ncol(right_angle), 1)
+  quiz_variables$AB <- right_angle[[1, round_num_col]]
+  quiz_variables$BC <- right_angle[[2, round_num_col]]
+  quiz_variables$AC <- right_angle[[3, round_num_col]]
+  quiz_variables$BD <- sample(1:(quiz_variables$AB - 1), 1)
+  # quiz_variables$AB <- 16
+  # quiz_variables$BC <- 12
+  # quiz_variables$AC <- 20
+
+  # quiz_variables$BD <- 9
+
+  quiz_variables$AE <- (quiz_variables$BC * 2)
+  quiz_variables$AD <- quiz_variables$AB - quiz_variables$BD
+  # quiz_variables$AD <- 1
+  quiz_variables$ED <- sqrt((quiz_variables$AE ^ 2) + (quiz_variables$AD ^ 2))
+  # answers list carry list for each input id and the expected value in this input and optional validation function name
+  answers = list(
+    list(id = "quiz_ten_input_one", value = quiz_variables$AD, func = ""),
+    list(id = "quiz_ten_input_two", value = round(quiz_variables$ED, 2), func = "")
+    )
   # return all that values as list of opjects similar to json opject
   return(list(quiz_variables = quiz_variables, answers = answers, weight = weight, difficulty = difficulty))
 }

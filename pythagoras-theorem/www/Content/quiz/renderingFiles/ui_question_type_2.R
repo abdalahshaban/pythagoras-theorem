@@ -20,6 +20,7 @@ span_style <- if (language$current == "english") "margin-left: 80px;" else "marg
 XY_num <- quiz_variables$XY
 YZ_num <- quiz_variables$YZ
 XL_num <- quiz_variables$XL
+align <- tr_style("text-align")
 
 tagList(
   div(
@@ -28,8 +29,9 @@ tagList(
         class = "col-xs-10 row-rtl",
         style = "margin:auto",
         div(
-          class = "col-xs-6",
+          class = "col-xs-7",
           style = "font-size: 20px;",
+          style = align,
           p(opposite_figure),
           p(X, Y, Z, L, quadrilaterl),
           p(m, "(<", X, Y, Z, ")", "=", m, "(<", X, L, Z, ")", "=", con_num(90), angle_shape, ","),
@@ -37,7 +39,7 @@ tagList(
           p(find_len, XZ_overLine, and, LZ_overLine)
         ),
         div(
-          class = "col-xs-6",
+          class = "col-xs-5",
           plotOutput(outputId = "plot_quiz_six_image_one")
         ),
         div(

@@ -32,7 +32,7 @@ shinyServer(function(input, output, session) {
     mj(paste("\\sqrt{", number, "}"), language$current)
   }
 
-  QuizPack::quiz_handeler(numberOfQuestionTypes = 3, env = environment(), default_question = 3)
+  QuizPack::quiz_handeler(numberOfQuestionTypes = 4, env = environment(), default_question = 4)
 
   output$learn_content <- renderUI({
     eval(parse(text = includeText(paste0("./www/Content/learn/step", toString(learn_tab$current_step), ".R"))))

@@ -65,6 +65,13 @@ span {
     justify-content: center;
 }
 
+#plot_quiz_ten_image_one {
+    height: 210px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .proof-p p {
     display: block;
 }

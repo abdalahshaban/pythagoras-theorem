@@ -69,6 +69,8 @@
         "YZ_2": "\\(\\text{(YZ)}^2\\)",
         "LZ_2": "\\(\\text{(LZ)}^2\\)",
         "XL_2": "\\(\\text{(XL)}^2\\)",
+        "ED_2": "\\(\\text{(ED)}^2\\)",
+        "EA_2": "\\(\\text{(EA)}^2\\)",
         "opposite_figure": "In the opposite figure :",
         "D": "D",
         "M": "m",
@@ -81,6 +83,10 @@
         "AB_overLine": "\\(\\overline{AB}\\)",
         "DE_overLine": "\\(\\overline{DE}\\)",
         "CE_overLine": "\\(\\overline{CE}\\)",
+        "BC_overLine": "\\(\\overline{BC}\\)",
+        "AD_overLine": "\\(\\overline{AD}\\)",
+        "ED_overLine": "\\(\\overline{ED}\\)",
+        "EA_overLine": "\\(\\overline{EA}\\)",
         "find_len": "\\(\\mathbf{Find}\\) : The length of",
         "find_len_2": "The length of each",
         "quadrilaterl": "is a quadrilaterl in which :",
@@ -105,7 +111,11 @@
         "midpoint": "is the midpoint of",
         "transversal": "is a transversal",
         "alternate_angles": "alternate angles",
-        "V.O.A": "V.O.A."
+        "V.O.A": "V.O.A.",
+        "triangle": "is a triangle",
+        "iF": "if",
+        "where": "where",
+        "find_len_of": "\\(\\mathbf{Find}\\):the length of each of"
     },
     "arabic": {
         "Multi Language application": "تطبيق متعدد اللغات",
@@ -177,6 +187,8 @@
         "YZ_2": "\\(\\alwaysar{(yz)^2}\\)",
         "LZ_2": "\\(\\alwaysar{(lz)^2}\\)",
         "XL_2": "\\(\\alwaysar{(xl)^2}\\)",
+        "ED_2": "\\(\\alwaysar{(ed)^2}\\)",
+        "EA_2": "\\(\\alwaysar{(ea)^2}\\)",
         "opposite_figure": "في الشكل المقابل :",
         "D": "د",
         "M": "ق",
@@ -189,6 +201,10 @@
         "AB_overLine": "\\(\\overline{\\alwaysar{ab}}\\)",
         "DE_overLine": "\\(\\overline{\\alwaysar{de}}\\)",
         "CE_overLine": "\\(\\overline{\\alwaysar{ce}}\\)",
+        "BC_overLine": "\\(\\overline{\\alwaysar{bc}}\\)",
+        "AD_overLine": "\\(\\overline{\\alwaysar{ad}}\\)",
+        "ED_overLine": "\\(\\overline{\\alwaysar{ed}}\\)",
+        "EA_overLine": "\\(\\overline{\\alwaysar{ea}}\\)",
         "quadrilaterl": "شكل رباعي فيه ",
         "find_len": "\\(\\mathbf{أوجد}\\) :طول كل من",
         "find_len_2": "طول كل من",
@@ -213,6 +229,10 @@
         "midpoint": "منتصف",
         "transversal": "مستقيم قاطع",
         "alternate_angles": "الزوايا البديلة",
-        "V.O.A": "رأس الزاوية"
+        "V.O.A": "رأس الزاوية",
+        "triangle": "مثلث فيه",
+        "IF": "اذا كان",
+        "where": "حيث",
+        "find_len_of": "أوجد طول كل من :"
     }
 }

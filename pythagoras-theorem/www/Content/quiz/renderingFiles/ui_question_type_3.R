@@ -23,7 +23,7 @@ CE_overLine <- tr("CE_overLine")
 AB_num <- quiz_variables$AB
 BC_num <- quiz_variables$BC
 
-
+align <- tr_style("text-align")
 
 tagList(
   div(
@@ -32,8 +32,9 @@ tagList(
         class = "col-xs-10 row-rtl",
         style = "margin:auto",
         div(
-          class = "col-xs-6",
+          class = "col-xs-7",
           style = "font-size: 20px;",
+          style = align,
           p(opposite_figure),
           p(BD_overLine, cap_shape, AE_overLine, "{", C, "}", AB_overLine, "//", DE_overLine),
           p(",", A, B, "=", con_num(AB_num), cm, ",", B, C, "=", con_num(BC_num), cm, "."),
@@ -41,7 +42,7 @@ tagList(
           p(cal_len, CE_overLine)
         ),
         div(
-          class = "col-xs-6",
+          class = "col-xs-5",
           plotOutput(outputId = "plot_quiz_eight_image_one")
         ),
         div(

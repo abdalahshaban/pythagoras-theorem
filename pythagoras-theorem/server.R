@@ -4,7 +4,7 @@ shinyServer(function(input, output, session) {
   translation <- fromJSON(file = "./www/Translations/lang.json")
   language <- reactiveValues(current = "english")
   learn_tab <- reactiveValues(current_step = 1, number_of_steps = 3)
-  common_examples_tab <- reactiveValues(current_step = 3, number_of_steps = 3)
+  common_examples_tab <- reactiveValues(current_step = 1, number_of_steps = 3)
   Master::ServerInit(mjxMenuHTMLCSS = TRUE,
                      Authorization = TRUE,
                      env = environment(),
@@ -32,7 +32,7 @@ shinyServer(function(input, output, session) {
     mj(paste("\\sqrt{", number, "}"), language$current)
   }
 
-  QuizPack::quiz_handeler(numberOfQuestionTypes = 1, env = environment(), default_question = 1)
+  QuizPack::quiz_handeler(numberOfQuestionTypes = 2, env = environment(), default_question = 2)
 
   output$learn_content <- renderUI({
     eval(parse(text = includeText(paste0("./www/Content/learn/step", toString(learn_tab$current_step), ".R"))))

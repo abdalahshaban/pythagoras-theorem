@@ -20,7 +20,7 @@ questionType1 <- function() {
       }
     }
   }
-  
+
   round_num_col <- round(runif(1, 1, 4), 0)
   quiz_variables$AB <- right_angle[[1, round_num_col]]
   quiz_variables$BC <- right_angle[[2, round_num_col]]
@@ -28,7 +28,66 @@ questionType1 <- function() {
 
   quiz_variables$solution <- sqrt((quiz_variables$BC ^ 2) - (quiz_variables$AC ^ 2))
   # answers list carry list for each input id and the expected value in this input and optional validation function name
-  answers = list(list(id = "quiz_one_input", value = quiz_variables$solution, func = ""))
+  answers = list(list(id = "quiz_four_input", value = quiz_variables$solution, func = ""))
+  # return all that values as list of opjects similar to json opject
+  return(list(quiz_variables = quiz_variables, answers = answers, weight = weight, difficulty = difficulty))
+}
+
+questionType2 <- function() {
+  # weight of this type of question
+  weight <- 5
+  difficulty <- "easy"
+  # quiz_variables all the variables that u will need in the question and will be randomly generated
+  quiz_variables <- list(
+    XY = 0,
+    YZ = 0,
+    XL = 0
+  )
+
+  right_angle_1 <- matrix(nrow = 3, ncol = 0)
+  right_angle_2 <- matrix(nrow = 3, ncol = 0)
+
+  for (XY in 1:10) {
+    for (YZ in 1:10) {
+      for (XZ in 1:10) {
+        if (XY ^ 2 + YZ ^ 2 == XZ ^ 2) {
+          right_angle_1 <- cbind(c(XY, YZ, XZ), right_angle_1)
+        }
+      }
+    }
+  }
+  round_num_col <- sample(1:3, 1)
+  quiz_variables$XY <- right_angle_1[[1, round_num_col]]
+  quiz_variables$YZ <- right_angle_1[[2, round_num_col]]
+  quiz_variables$XZ <- right_angle_1[[3, round_num_col]]
+
+  for (XL in 1:10) {
+    for (XZ in 1:10) {
+      for (LZ in 1:10) {
+        if (right_angle_1[[3, round_num_col]] ^ 2 - XL ^ 2 == LZ ^ 2) {
+          right_angle_2 <- cbind(c(XL, right_angle_1[[3, round_num_col]], LZ), right_angle_2)
+        }
+      }
+    }
+  }
+
+  round_num_col <- sample(1:3, 1)
+  quiz_variables$XL <- right_angle_2[[1, round_num_col]]
+  quiz_variables$XZ <- right_angle_2[[2, round_num_col]]
+  quiz_variables$LZ <- right_angle_2[[3, round_num_col]]
+  # right_angle_1[[3, round_num_col]] ^ 2 - XL ^ 2 == LZ ^ 2
+  # quiz_variables$XL <- sample(1:50, 1)
+  # quiz_variables$XZ <- right_angle_1[[3, round_num_col]]
+  # quiz_variables$LZ <- sqrt((quiz_variables$XZ ^ 2) - (quiz_variables$XL ^ 2))
+
+
+
+  quiz_variables$solution <- sqrt((quiz_variables$BC ^ 2) - (quiz_variables$AC ^ 2))
+  # answers list carry list for each input id and the expected value in this input and optional validation function name
+  answers = list(
+    list(id = "quiz_six_input_one", value = quiz_variables$XZ, func = ""),
+    list(id = "quiz_six_input_two", value = quiz_variables$LZ, func = "")
+    )
   # return all that values as list of opjects similar to json opject
   return(list(quiz_variables = quiz_variables, answers = answers, weight = weight, difficulty = difficulty))
 }

@@ -54,6 +54,7 @@
         "A": "A",
         "B": "B",
         "C": "C",
+        "E": "E",
         "X": "X",
         "Y": "Y",
         "Z": "Z",
@@ -76,6 +77,10 @@
         "BD_overLine": "\\(\\overline{BD}\\)",
         "XZ_overLine": "\\(\\overline{XZ}\\)",
         "LZ_overLine": "\\(\\overline{LZ}\\)",
+        "AE_overLine": "\\(\\overline{AE}\\)",
+        "AB_overLine": "\\(\\overline{AB}\\)",
+        "DE_overLine": "\\(\\overline{DE}\\)",
+        "CE_overLine": "\\(\\overline{CE}\\)",
         "find_len": "\\(\\mathbf{Find}\\) : The length of",
         "find_len_2": "The length of each",
         "quadrilaterl": "is a quadrilaterl in which :",
@@ -95,7 +100,12 @@
         "BD_frac_case": "\\(\\frac{24}{5}\\)",
         "find_len_unknown": "find the length of the unknown side :",
         "Answer": "Answer :",
-        "In": "In"
+        "In": "In",
+        "cal_len": "\\(\\mathbf{Calculate}\\) the length of :",
+        "midpoint": "is the midpoint of",
+        "transversal": "is a transversal",
+        "alternate_angles": "alternate angles",
+        "V.O.A": "V.O.A."
     },
     "arabic": {
         "Multi Language application": "تطبيق متعدد اللغات",
@@ -152,6 +162,7 @@
         "A": "\\(\\alwaysar{a}\\)",
         "B": "\\(\\alwaysar{b}\\)",
         "C": "\\(\\alwaysar{c}\\)",
+        "E": "هـ",
         "X": "\\(\\alwaysar{x}\\)",
         "Y": "\\(\\alwaysar{y}\\)",
         "Z": "\\(\\alwaysar{z}\\)",
@@ -174,6 +185,10 @@
         "BD_overLine": "\\(\\overline{\\alwaysar{bd}}\\)",
         "XZ_overLine": "\\(\\overline{\\alwaysar{xz}}\\)",
         "LZ_overLine": "\\(\\overline{\\alwaysar{lz}}\\)",
+        "AE_overLine": "\\(\\overline{\\alwaysar{ae}}\\)",
+        "AB_overLine": "\\(\\overline{\\alwaysar{ab}}\\)",
+        "DE_overLine": "\\(\\overline{\\alwaysar{de}}\\)",
+        "CE_overLine": "\\(\\overline{\\alwaysar{ce}}\\)",
         "quadrilaterl": "شكل رباعي فيه ",
         "find_len": "\\(\\mathbf{أوجد}\\) :طول كل من",
         "find_len_2": "طول كل من",
@@ -193,6 +208,11 @@
         "BD_frac_case": "\\(\\alwaysar{\\frac{24}{5}}\\)",
         "find_len_unknown": "أوجد طول ضلع المشار اليه بالعلامة (؟) :",
         "Answer": "الأجابة :",
-        "In": "في"
+        "In": "في",
+        "cal_len": "احسب :طول",
+        "midpoint": "منتصف",
+        "transversal": "مستقيم قاطع",
+        "alternate_angles": "الزوايا البديلة",
+        "V.O.A": "رأس الزاوية"
     }
 }

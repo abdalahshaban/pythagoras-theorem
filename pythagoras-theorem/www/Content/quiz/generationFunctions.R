@@ -11,9 +11,9 @@ questionType1 <- function() {
 
   right_angle <- matrix(nrow = 3, ncol = 0)
 
-  for (AB in 1:20) {
-    for (BC in 1:20) {
-      for (AC in 1:20) {
+  for (AB in 1:50) {
+    for (BC in 1:50) {
+      for (AC in 1:50) {
         if (BC ^ 2 - AC ^ 2 == AB ^ 2) {
           right_angle <- cbind(c(AB, BC, AC), right_angle)
         }
@@ -21,7 +21,7 @@ questionType1 <- function() {
     }
   }
 
-  round_num_col <- round(runif(1, 1, 4), 0)
+  round_num_col <- sample(1:ncol(right_angle), 1)
   quiz_variables$AB <- right_angle[[1, round_num_col]]
   quiz_variables$BC <- right_angle[[2, round_num_col]]
   quiz_variables$AC <- right_angle[[3, round_num_col]]
@@ -47,23 +47,25 @@ questionType2 <- function() {
   right_angle_1 <- matrix(nrow = 3, ncol = 0)
   right_angle_2 <- matrix(nrow = 3, ncol = 0)
 
-  for (XY in 1:10) {
-    for (YZ in 1:10) {
-      for (XZ in 1:10) {
+  for (XY in 1:50) {
+    for (YZ in 1:50) {
+      for (XZ in 1:50) {
         if (XY ^ 2 + YZ ^ 2 == XZ ^ 2) {
           right_angle_1 <- cbind(c(XY, YZ, XZ), right_angle_1)
         }
       }
     }
   }
-  round_num_col <- sample(1:3, 1)
+
+
+  round_num_col <- sample(1:ncol(right_angle_1), 1)
   quiz_variables$XY <- right_angle_1[[1, round_num_col]]
   quiz_variables$YZ <- right_angle_1[[2, round_num_col]]
   quiz_variables$XZ <- right_angle_1[[3, round_num_col]]
 
-  for (XL in 1:10) {
-    for (XZ in 1:10) {
-      for (LZ in 1:10) {
+  for (XL in 1:50) {
+    for (XZ in 1:50) {
+      for (LZ in 1:50) {
         if (right_angle_1[[3, round_num_col]] ^ 2 - XL ^ 2 == LZ ^ 2) {
           right_angle_2 <- cbind(c(XL, right_angle_1[[3, round_num_col]], LZ), right_angle_2)
         }
@@ -71,7 +73,7 @@ questionType2 <- function() {
     }
   }
 
-  round_num_col <- sample(1:3, 1)
+  round_num_col <- sample(1:ncol(right_angle_2), 1)
   quiz_variables$XL <- right_angle_2[[1, round_num_col]]
   quiz_variables$XZ <- right_angle_2[[2, round_num_col]]
   quiz_variables$LZ <- right_angle_2[[3, round_num_col]]
@@ -91,3 +93,38 @@ questionType2 <- function() {
   # return all that values as list of opjects similar to json opject
   return(list(quiz_variables = quiz_variables, answers = answers, weight = weight, difficulty = difficulty))
 }
+
+questionType3 <- function() {
+  # weight of this type of question
+  weight <- 5
+  difficulty <- "easy"
+  # quiz_variables all the variables that u will need in the question and will be randomly generated
+  quiz_variables <- list(
+    AB = 0,
+    BC = 0
+  )
+
+  right_angle <- matrix(nrow = 3, ncol = 0)
+
+  for (AB in 1:50) {
+    for (BC in 1:50) {
+      for (AC in 1:50) {
+        if (AB ^ 2 + BC ^ 2 == AC ^ 2) {
+          right_angle <- cbind(c(AB, BC, AC), right_angle)
+        }
+      }
+    }
+  }
+
+  round_num_col <- sample(1:ncol(right_angle), 1)
+  quiz_variables$AB <- right_angle[[1, round_num_col]]
+  quiz_variables$BC <- right_angle[[2, round_num_col]]
+  quiz_variables$AC <- right_angle[[3, round_num_col]]
+
+  # quiz_variables$solution <- quiz_variables$AC
+  # answers list carry list for each input id and the expected value in this input and optional validation function name
+  answers = list(list(id = "quiz_eight_input_one", value = quiz_variables$AC, func = ""))
+  # return all that values as list of opjects similar to json opject
+  return(list(quiz_variables = quiz_variables, answers = answers, weight = weight, difficulty = difficulty))
+}
+

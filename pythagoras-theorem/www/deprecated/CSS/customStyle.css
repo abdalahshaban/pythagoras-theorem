@@ -58,6 +58,13 @@ span {
     justify-content: center;
 }
 
+#plot_quiz_eight_image_one {
+    height: 230px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .proof-p p {
     display: block;
 }

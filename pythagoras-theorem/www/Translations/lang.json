@@ -71,6 +71,8 @@
         "XL_2": "\\(\\text{(XL)}^2\\)",
         "ED_2": "\\(\\text{(ED)}^2\\)",
         "EA_2": "\\(\\text{(EA)}^2\\)",
+        "BD_2": "\\(\\text{(BD)}^2\\)",
+        "BD2_2": "\\(\\text{2(BD)}^2\\)",
         "opposite_figure": "In the opposite figure :",
         "D": "D",
         "M": "m",
@@ -115,7 +117,12 @@
         "triangle": "is a triangle",
         "iF": "if",
         "where": "where",
-        "find_len_of": "\\(\\mathbf{Find}\\):the length of each of"
+        "find_len_of": "\\(\\mathbf{Find}\\):the length of each of",
+        "prove": "\\(\\mathbf{Prove that}\\):",
+        "paper": "Use Paper and Pen to Solve this Question",
+        "subtrac": "By subtracting",
+        "Q.E.D": "Q.E.D.",
+        "from": "from"
     },
     "arabic": {
         "Multi Language application": "تطبيق متعدد اللغات",
@@ -189,6 +196,8 @@
         "XL_2": "\\(\\alwaysar{(xl)^2}\\)",
         "ED_2": "\\(\\alwaysar{(ed)^2}\\)",
         "EA_2": "\\(\\alwaysar{(ea)^2}\\)",
+        "BD_2": "\\(\\alwaysar{(bd)^2}\\)",
+        "BD2_2": "\\(\\alwaysar{2(bd)^2}\\)",
         "opposite_figure": "في الشكل المقابل :",
         "D": "د",
         "M": "ق",
@@ -233,6 +242,11 @@
         "triangle": "مثلث فيه",
         "IF": "اذا كان",
         "where": "حيث",
-        "find_len_of": "أوجد طول كل من :"
+        "find_len_of": "أوجد طول كل من :",
+        "prove": "اثبت ذلك",
+        "paper": "استخدم الورق والقلم لحل هذا السؤال",
+        "subtrac": "عن طريق طرح",
+        "Q.E.D": "وهو المطلوب إثباته",
+        "from": "من"
     }
 }

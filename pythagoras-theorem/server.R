@@ -8,6 +8,8 @@ shinyServer(function(input, output, session) {
   Master::ServerInit(mjxMenuHTMLCSS = TRUE,
                      Authorization = TRUE,
                      env = environment(),
+                     ChallengeNextButton = F,
+                     ChallengeSubmitSolution = F,
                      session = session)
 
 
@@ -32,7 +34,8 @@ shinyServer(function(input, output, session) {
     mj(paste("\\sqrt{", number, "}"), language$current)
   }
 
-  QuizPack::quiz_handeler(numberOfQuestionTypes = 4, env = environment(), default_question = 4)
+  QuizPack::quiz_handeler(numberOfQuestionTypes = 4, env = environment(), default_question = NULL)
+  QuizPack::challenge_handeler(numberOfQuestionTypes = 1, env = environment(), default_question = NULL)
 
   output$learn_content <- renderUI({
     eval(parse(text = includeText(paste0("./www/Content/learn/step", toString(learn_tab$current_step), ".R"))))

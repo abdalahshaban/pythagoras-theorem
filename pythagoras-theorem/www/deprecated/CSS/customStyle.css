@@ -72,6 +72,10 @@ span {
     justify-content: center;
 }
 
+#plot_Ch_one_image_one {
+    height: 300px !important;
+}
+
 .proof-p p {
     display: block;
 }

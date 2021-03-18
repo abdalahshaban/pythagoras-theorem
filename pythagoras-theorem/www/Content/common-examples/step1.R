@@ -37,7 +37,7 @@ tagList(
                 class = "col-xs-4",
                 div(
                     class = "col-xs-12",
-                    style = "height: 150px;",
+                    style = "height: 170px;",
                     plotOutput(outputId = "plot_common_one_image_one")
                 ),
                 div(
@@ -61,7 +61,7 @@ tagList(
                 class = "col-xs-4",
                 div(
                     class = "col-xs-12",
-                    style = "height: 150px;",
+                    style = "height: 170px;",
                     plotOutput(outputId = "plot_common_one_image_two")
                 ),
                 div(
@@ -85,7 +85,7 @@ tagList(
                 class = "col-xs-4",
                 div(
                     class = "col-xs-12",
-                    style = "height: 150px;",
+                    style = "height: 170px;",
                     plotOutput(outputId = "plot_common_one_image_three")
                 ),
                 div(

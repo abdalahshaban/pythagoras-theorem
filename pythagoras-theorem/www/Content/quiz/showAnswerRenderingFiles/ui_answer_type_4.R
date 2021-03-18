@@ -53,8 +53,8 @@ tagList(
       div(
         class = "col-xs-12 row-rtl",
         style = "padding:0",
-        p(class = "col-xs-3", style = "padding:0", ",", because, B, D, "=", con_num(BD_num), cm, "."),
-        p(class = "col-xs-5", therefore, A, D, "=", con_num(AB_num), "-", con_num(BD_num), "=", con_num(AD_num), cm, "."),
+        p(class = "col-xs-3", style = "padding:0", ",", because, B, D, "=", con_num(BD_num), cm),
+        p(class = "col-xs-5", therefore, A, D, "=", con_num(AB_num), "-", con_num(BD_num), "=", con_num(AD_num), cm),
         p(class = "col-xs-4", "(", first_req, ")")
       ),
       p(",", because, A, E, "=", con_num(2), B, C, "=", con_num(2), "x", con_num(BC_num), "=", con_num(AE_num), cm, "."),

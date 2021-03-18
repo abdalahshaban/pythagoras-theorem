@@ -24,8 +24,8 @@ output[["plot_quiz_ten_image_one"]] <- renderPlot({
   text(C, x = 7, y = 3, cex = cex, col = color, font = 7)
   text(D, x = 40, y = 58, cex = cex, col = color, font = 7)
   text(E, x = 95, y = 97, cex = cex, col = color, font = 7)
-  text(paste(con_num(BD_num), cm), x = 48, y = 40, cex = cex, col = color, font = 7, srt = -90)
+  text(paste(con_num(BD_num), cm), x = 49, y = 35, cex = cex, col = color, font = 7, srt = -90)
   text(paste(con_num(BC_num), cm), x = 25, y = 4, cex = cex, col = color, font = 7)
-  text(paste(con_num(AC_num), cm), x = 18, y = 45, cex = cex, col = color, font = 7, srt = 55)
+  text(paste(con_num(AC_num), cm), x = 16, y = 45, cex = cex, col = color, font = 7, srt = 55)
 }, height = 210, width = 320)
 # height = 210, width = 320

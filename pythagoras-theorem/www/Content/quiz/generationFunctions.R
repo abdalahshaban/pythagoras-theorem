@@ -62,28 +62,23 @@ questionType2 <- function() {
   quiz_variables$XY <- right_angle_1[[1, round_num_col]]
   quiz_variables$YZ <- right_angle_1[[2, round_num_col]]
   quiz_variables$XZ <- right_angle_1[[3, round_num_col]]
+  # quiz_variables$XL <- sample(1:50, 1)
+
 
   for (XL in 1:50) {
-    for (XZ in 1:50) {
-      for (LZ in 1:50) {
-        if (right_angle_1[[3, round_num_col]] ^ 2 - XL ^ 2 == LZ ^ 2) {
-          right_angle_2 <- cbind(c(XL, right_angle_1[[3, round_num_col]], LZ), right_angle_2)
-        }
+    for (LZ in 1:50) {
+      if (quiz_variables$XZ ^ 2 - XL ^ 2 == LZ ^ 2) {
+        right_angle_2 <- cbind(c(XL, quiz_variables$XZ, LZ), right_angle_2)
       }
     }
   }
 
+
   round_num_col <- sample(1:ncol(right_angle_2), 1)
   quiz_variables$XL <- right_angle_2[[1, round_num_col]]
-  quiz_variables$XZ <- right_angle_2[[2, round_num_col]]
+  # quiz_variables$XZ <- right_angle_2[[2, round_num_col]]
   quiz_variables$LZ <- right_angle_2[[3, round_num_col]]
-  # right_angle_1[[3, round_num_col]] ^ 2 - XL ^ 2 == LZ ^ 2
-  # quiz_variables$XL <- sample(1:50, 1)
-  # quiz_variables$XZ <- right_angle_1[[3, round_num_col]]
-  # quiz_variables$LZ <- sqrt((quiz_variables$XZ ^ 2) - (quiz_variables$XL ^ 2))
-
-
-
+  
   quiz_variables$solution <- sqrt((quiz_variables$BC ^ 2) - (quiz_variables$AC ^ 2))
   # answers list carry list for each input id and the expected value in this input and optional validation function name
   answers = list(
@@ -120,8 +115,7 @@ questionType3 <- function() {
   quiz_variables$AB <- right_angle[[1, round_num_col]]
   quiz_variables$BC <- right_angle[[2, round_num_col]]
   quiz_variables$AC <- right_angle[[3, round_num_col]]
-
-  # quiz_variables$solution <- quiz_variables$AC
+  
   # answers list carry list for each input id and the expected value in this input and optional validation function name
   answers = list(list(id = "quiz_eight_input_one", value = quiz_variables$AC, func = ""))
   # return all that values as list of opjects similar to json opject
@@ -144,7 +138,6 @@ questionType4 <- function() {
   )
 
   right_angle <- matrix(nrow = 3, ncol = 0)
-  right_angle_1 <- matrix(nrow = 3, ncol = 0)
 
   for (AB in 1:20) {
     for (BC in 1:20) {
@@ -156,31 +149,17 @@ questionType4 <- function() {
     }
   }
 
-  for (AE in 1:20) {
-    for (AD in 1:20) {
-      for (ED in 1:20) {
-        if (AB ^ 2 + BC ^ 2 == AC ^ 2) {
-          right_angle <- cbind(c(AB, BC, AC), right_angle)
-        }
-      }
-    }
-  }
-
   round_num_col <- sample(1:ncol(right_angle), 1)
   quiz_variables$AB <- right_angle[[1, round_num_col]]
   quiz_variables$BC <- right_angle[[2, round_num_col]]
   quiz_variables$AC <- right_angle[[3, round_num_col]]
-  quiz_variables$BD <- sample(1:(quiz_variables$AB - 1), 1)
-  # quiz_variables$AB <- 16
-  # quiz_variables$BC <- 12
-  # quiz_variables$AC <- 20
 
-  # quiz_variables$BD <- 9
+  quiz_variables$BD <- sample(2:(quiz_variables$AB - 1), 1)
 
   quiz_variables$AE <- (quiz_variables$BC * 2)
   quiz_variables$AD <- quiz_variables$AB - quiz_variables$BD
-  # quiz_variables$AD <- 1
   quiz_variables$ED <- sqrt((quiz_variables$AE ^ 2) + (quiz_variables$AD ^ 2))
+
   # answers list carry list for each input id and the expected value in this input and optional validation function name
   answers = list(
     list(id = "quiz_ten_input_one", value = quiz_variables$AD, func = ""),

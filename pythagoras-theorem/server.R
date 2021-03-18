@@ -8,7 +8,35 @@ shinyServer(function(input, output, session) {
   Master::ServerInit(mjxMenuHTMLCSS = TRUE,
                      Authorization = TRUE,
                      env = environment(),
+                     ChallengeNextButton = F,
+                     ChallengeSubmitSolution = F,
                      session = session)
+
+
+
+  tr <- function(word) {
+    translation[[language$current]][[word]]
+  }
+  tr_style <- function(word) {
+    translation[[language$current]][["LanguageOptions"]][["style"]][[word]]
+  }
+
+  tr_latex <- function(word) {
+    latex2exp::TeX(Translations::plotTex(paste("\\s{", word, "}"), language$current))
+  }
+  con_num <- function(number) {
+    Translations::translateNumber(number, language$current)
+  }
+  number_mj <- function(number) {
+    mj(paste("(", number, ")^{2}"), language$current)
+  }
+  number_sqrt <- function(number) {
+    mj(paste("\\sqrt{", number, "}"), language$current)
+  }
+
+  QuizPack::quiz_handeler(numberOfQuestionTypes = 4, env = environment(), default_question = NULL)
+  QuizPack::challenge_handeler(numberOfQuestionTypes = 1, env = environment(), default_question = NULL)
+
   output$learn_content <- renderUI({
     eval(parse(text = includeText(paste0("./www/Content/learn/step", toString(learn_tab$current_step), ".R"))))
   })

@@ -1,0 +1,88 @@
+p,
+span {
+    color: #262C3A;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 30px;
+}
+
+.form-control {
+    border: 2px solid #F5B13B;
+}
+
+.form-control:focus {
+    border: 3px solid #F5B13B;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px #F5B13B;
+}
+
+#plot_common_one_image_one {
+    height: 170px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#plot_common_one_image_two {
+    height: 170px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#plot_common_one_image_three {
+    height: 170px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#plot_common_two_image_one {
+    height: 150px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#plot_common_three_image_one {
+    height: 200px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#plot_quiz_four_image_one {
+    height: 190px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#plot_quiz_six_image_one {
+    height: 170px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#plot_quiz_eight_image_one {
+    height: 230px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#plot_quiz_ten_image_one {
+    height: 210px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#plot_Ch_one_image_one {
+    height: 300px !important;
+}
+
+.proof-p p {
+    display: block;
+}
